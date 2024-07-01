@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Number=$1
- if [[ $Number -gt 0 ]];
+ if [ $Number -gt 10 ];
  then 
     echo "$Number is greaterthan 10"
 else
