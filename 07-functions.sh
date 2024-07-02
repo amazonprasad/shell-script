@@ -11,7 +11,7 @@ N="\e[0m"
 
 # This function should validate the previous command and onform user it is success or failure
 
-Validare(){
+Validate(){
     # $1 it will receive the first argument 
     if [ $1 -ne 0 ]
     then 
