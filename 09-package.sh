@@ -2,5 +2,5 @@
 
 for  i in $@
 do 
-    yum install mysql -y 
+    yum install git -y 
 done
