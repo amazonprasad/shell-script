@@ -15,9 +15,9 @@ Validate(){
     # $1 it will receive the first argument 
     if [ $1 -ne 0 ]
     then 
-        echo -e "$2...$R Failure"
+        echo -e "$2...$R Failure$N"
     else 
-        echo -e "$2...$G Success"
+        echo -e "$2...$G Success$N"
     fi
 }
  userID=$(id -u)
