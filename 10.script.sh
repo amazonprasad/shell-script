@@ -37,6 +37,6 @@ do
         Validate $? "$i"
     else 
         echo -e " $Y $I is removed$N"
-        echo -e " $Y $i is already installed$N"
+        #echo -e " $Y $i is already installed$N"
     fi
 done
