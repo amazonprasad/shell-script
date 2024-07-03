@@ -15,7 +15,7 @@ then
     echo -e "Error: $R please execute this script as a root user$N"
     exit 1
 else 
-    echo -e "$GYou are the root user$N"
+    echo -e "$G You are the root user$N"
 fi 
 
 Validate(){
