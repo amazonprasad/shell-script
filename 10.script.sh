@@ -10,12 +10,12 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
-if [$userId -ne 0 ]
+if [ $userId -ne 0 ]
 then 
-    echo -e "Error: please execute this script as a root user"
+    echo -e "$RError: please execute this script as a root user$N"
     exit 1
 else 
-    echo -e "You are the root user"
+    echo -e "$GYou are the root user$N"
 fi 
 
 Validate(){
