@@ -4,7 +4,7 @@ Date=$(date +%F)
 Srcipt_name=$0
 Logdir=/home/centos/shell/script.logs
 Logfile=$Logfile/$Script_name-$Date.log
-
+userid=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
