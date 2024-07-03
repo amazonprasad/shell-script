@@ -31,10 +31,11 @@ do
     yum list installed $i &>>$Logfile
     if [ $? -ne 0 ]
     then 
-        echo " $i is not installed let's install it " 
-        yum install $i -y &>> $Logfile
+        #echo " $i is not installed let's install it " 
+        echo " $i remove package" 
+        yum remove $i -y &>> $Logfile
         Validate $? "$i"
     else 
+        echo -e " $Y $I is removed$N"
         echo -e " $Y $i is already installed$N"
-    fi 
 done
