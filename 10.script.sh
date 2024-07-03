@@ -12,7 +12,7 @@ Y="\e[33m"
 
 if [ $userid -ne 0 ];
 then 
-    echo -e "Error: $Rplease execute this script as a root user$N"
+    echo -e "Error: $R please execute this script as a root user$N"
     exit 1
 else 
     echo -e "$GYou are the root user$N"
