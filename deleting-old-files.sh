@@ -1,9 +1,9 @@
 #!/bin/bash
 
-R="/e[31m"
-G="/e[32m"
-Y="/e[33m"
-N="/e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 Source_dir=/tmp/muniprasad-logs
 
 if [ ! -d $Source_dir]
