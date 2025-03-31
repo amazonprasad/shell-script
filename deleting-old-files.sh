@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[0m"
 Source_dir=/tmp/muniprasad-logs
 
-if [ ! -d $Source_dir]
+if [ ! -d $Source_dir ]
 then 
     echo -e " $R Source_dir: $Source_dir does not exist $N "
 fi 
