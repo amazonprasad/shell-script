@@ -15,7 +15,7 @@ case $opt in
 esac 
 done
 
-if [-z "NAME"] || [-Z "WISHES"];
+if [ -z "NAME" ] || [ -Z "WISHES" ]; then
     echo " ERROR: Both -n and -w are mandatory options"
     USAGE 
     exit 1
