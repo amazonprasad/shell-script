@@ -6,12 +6,12 @@ WISHES=""
 
 
 while getopts ":n:w:h" opt; do
-case #opt in 
+case $opt in 
     n) NAME="$OPTARG";;
     w) WISHES="$OPTARG";;
     \?) echo "Invalid options: -"$OPTARG"" > &2 ; USAGE; exit ;;
     :) USAGE; exit ;;
-    h) USAGE ; exit ;
+    h) USAGE ; exit ;;
 esac 
 done
 
