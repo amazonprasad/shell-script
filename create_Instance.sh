@@ -13,10 +13,10 @@ do
     else
         INSTANCE_TYPE="t2.micro"
     fi
-    IP_Adress=$(aws ec2 run-instances --image-id ami-0b4f379183e5706b9
+    aws ec2 run-instances --image-id ami-0b4f379183e5706b9
      --instance-type $INSTANCE_TYPE --security-group-ids $SECURITY_ID
        --tag-specifications "ResourseType=instance,Tags=[{Key=NAME,Value=$i}]" 
-       --query 'Instance[0].PrivateIpAddres' --output text) 
+       --query 'Instance[0].PrivateIpAddres' --output text
 done
 
 
