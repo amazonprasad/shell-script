@@ -19,5 +19,5 @@ do
     --security-group-ids sg-02a430c742a1d56b7 --tag-specifications "ResourseType=instance,
     Tags=[{Key=NAME,Value=$i}]" --query 'Instance[0]. PrivateIpAddres' --output text) 
 done
-echo "$i:$IP_Adress"
+
 
