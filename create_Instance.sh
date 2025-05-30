@@ -1,11 +1,9 @@
-#/bin/bash
+#!/bin/bash
 
 AMI=ami-0b4f379183e5706b9
 SECURITY_ID=sg-02a430c742a1d56b7
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" 
 "dispatch" "web")
-ZONE_ID=Z03833742M0KF7ERPTLO0
-DOMAIN_NAME=manacars.shop
 
 for i in "${Instances[@]}"
 do 
