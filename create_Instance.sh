@@ -5,7 +5,7 @@ SECURITY_ID=sg-02a430c742a1d56b7
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" 
 "dispatch" "web")
 
-for i in "${Instances[@]}"
+for i in "${INSTANCES[@]}"
 do 
     if [ $i == "mongodb" ] || [ $i == "mysql" ] || [ $i == "shipping" ]
     then
