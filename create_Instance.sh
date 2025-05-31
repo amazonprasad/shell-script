@@ -1,20 +1,18 @@
 #!/bin/bash
 
-AMI=ami-0b4f379183e5706b9 #this keeps on changing
-SG_ID=sg-02a430c742a1d56b7 #replace with your SG ID
-INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
-ZONE_ID=Z03833742M0KF7ERPTLO0 # replace your zone ID
-DOMAIN_NAME="manacars.shop"
+AMI=ami-0b4f379183e5706b9
+SG_ID=sg-02a430c742a1d56b7
+INSTANCES=("mongodb" "user" "cart" "redis" "catalogue" "shipping" "mysql" "rabbitmq" "payment" "dispatch" "web")
 
 for i in "${INSTANCES[@]}"
-do
-    if [ $i == "mongodb" ] || [ $i == "mysql" ] || [ $i == "shipping" ]
-    then
+do 
+    if [ $i == "mongodb" ] || [ $i == "mysql" ] || [ $i == "shippign" ]
+    then 
         INSTANCE_TYPE="t3.small"
     else
-        INSTANCE_TYPE="t2.micro"
+        INSTANCE_TYPE="t2.small"
     fi
 
     IP_ADDRESS=$(aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group-ids sg-02a430c742a1d56b7 --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Instances[0].PrivateIpAddress' --output text)
-    echo "$i: $IP_ADDRESS"
+    echo $i: $IP_ADDRESS
 done
