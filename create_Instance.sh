@@ -4,7 +4,7 @@ AMI=ami-0b4f379183e5706b9
 SG_ID=sg-02a430c742a1d56b7
 INSTANCES=("mongodb" "user" "cart" "redis" "catalogue" "shipping" "mysql" "rabbitmq" "payment" "dispatch" "web")
 ZONE_ID=Z03833742M0KF7ERPTLO0
-DOMAIN_NAME="manacars.shop"
+DOMAIN_NAME=manacars.shop
 for i in "${INSTANCES[@]}"
 do 
     if [ $i == "mongodb" ] || [ $i == "mysql" ] || [ $i == "shippign" ]
